@@ -9,10 +9,10 @@ export default {
 
 <template>
     <div class="single-card">
-        <div class="name">[TITOLO]</div>
-        <div class="original-name">[TITOLO ORIGINALE]</div>
-        <div class="language">[LINGUA]</div>
-        <div class="review">[VOTO]</div>
+        <div class="name">{{ cardInfo.title }}</div>
+        <div class="original-name">{{ cardInfo.original_title }}</div>
+        <div class="language">{{ cardInfo.original_language }}</div>
+        <div class="review">{{ cardInfo.vote_average }}</div>
     </div>
 </template>
 
