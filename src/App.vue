@@ -23,9 +23,16 @@ export default {
         api_key: '479a9729247295c116f0ae2984f62d3b',
 
       };
+      console.log('apiUrl')
       if(store.searchedMovie !== '') {
         queryParams.query = store.searchedMovie;
       }
+      axios.get(apiUrl, {
+        params: queryParams
+      })
+      .then((response) => {
+        store.movies = response.data.results;
+      });
     }
 
   },

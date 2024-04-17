@@ -19,7 +19,7 @@ export default {
     <section class="cards-list">
         <div class="container">
             <div class="movie-cards">
-                <MovieCard  v-for="card in store.cards" :key="card.id" :cardInfo="card"></MovieCard>
+                <MovieCard  v-for="movie in store.movies" :cardInfo="movie"></MovieCard>
             </div>
         </div>
     </section>
