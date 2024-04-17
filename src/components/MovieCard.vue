@@ -5,11 +5,11 @@ export default {
     props: {
         cardInfo: Object
     },
-    // data() {
-    //     return {
-    //         image: image
-    //     };
-    // }
+    methods: {
+        getImageUrl(name) {
+        return new URL(`../assets/img/${name}.png`, import.meta.url).href
+        }
+    }
 }
 </script>
 
@@ -18,8 +18,8 @@ export default {
         <div class="name">{{ cardInfo.title }}</div>
         <div class="original-name">{{ cardInfo.original_title }}</div>
         <div class="language" v-if="cardInfo.original_language === 'en'">
-            <!-- <img :src="image"> -->
-            ciao
+            <img :src="imgUrl"/>
+            ciao test test
         </div>
         <div class="language" v-else>{{ cardInfo.original_language }}</div>
         <div class="review">{{ cardInfo.vote_average }}</div>
