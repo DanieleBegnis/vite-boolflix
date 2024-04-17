@@ -1,6 +1,13 @@
 <script>
+import { store } from '../store.js';
+
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    data() {
+        return {
+            store,
+        };
+    }
 }
 </script>
 
@@ -9,8 +16,8 @@ export default {
         <div class="container">
             <h1>BOOLFLIX</h1>
             <div class="searchbar">
-                <button>Cerca</button>
-                <input type="text" placeholder="Cerca il film">
+                <button @click="$emit('searchPerformed')">Cerca</button>
+                <input type="text" placeholder="Cerca il film" v-model="store.searchedMovie">
             </div>
         </div>
     </header>

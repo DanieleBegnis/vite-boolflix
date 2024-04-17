@@ -21,8 +21,11 @@ export default {
       let apiUrl = 'https://api.themoviedb.org/3/search/movie';
       const queryParams = {
         api_key: '479a9729247295c116f0ae2984f62d3b',
-        
+
       };
+      if(store.searchedMovie !== '') {
+        queryParams.query = store.searchedMovie;
+      }
     }
 
   },
@@ -34,7 +37,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader></AppHeader>
+  <AppHeader @searchPerformed="getMoviesFromApi"></AppHeader>
   <AppMain></AppMain>
 </template>
 
