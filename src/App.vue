@@ -1,14 +1,31 @@
 <script>
 import axios from 'axios';
 import { store } from './store.js';
+import AppHeader from './components/AppHeader.vue';
 
 export default {
+  components: {
+    AppHeader,
+
+  },
+  data() {
+    return {
+      store
+      
+    };
+  },
+  methods: {
+
+  },
+  mounted() {
+
+  }
 
 }
 </script>
 
 <template>
-<div>test test</div>
+  <AppHeader></AppHeader>
 </template>
 
 <style lang="scss">
