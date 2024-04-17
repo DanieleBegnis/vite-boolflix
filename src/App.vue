@@ -2,10 +2,12 @@
 import axios from 'axios';
 import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
 
 export default {
   components: {
     AppHeader,
+    AppMain
 
   },
   data() {
@@ -15,6 +17,13 @@ export default {
     };
   },
   methods: {
+    getMoviesFromApi() {
+      let apiUrl = 'https://api.themoviedb.org/3/search/movie';
+      const queryParams = {
+        api_key: '479a9729247295c116f0ae2984f62d3b',
+        
+      };
+    }
 
   },
   mounted() {
@@ -26,6 +35,7 @@ export default {
 
 <template>
   <AppHeader></AppHeader>
+  <AppMain></AppMain>
 </template>
 
 <style lang="scss">
