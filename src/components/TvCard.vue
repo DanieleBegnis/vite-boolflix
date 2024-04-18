@@ -63,5 +63,14 @@ export default {
     .language-img {
         width: 16px;
     }
+    .card-informations {
+        display: none;
+    }
+    .single-card:hover .card-informations {
+        display: block;
+    }
+    .single-card:hover .card-image {
+        display: none;
+    }
 
 </style>
