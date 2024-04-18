@@ -44,6 +44,7 @@ export default {
             <div class="language" v-else>{{ cardInfo.original_language }}</div>
         </div>
         <!-- <div class="review">{{ roundVote() }}</div> -->
+        <div class="overwiew">{{ cardInfo.overview }}</div>
     </div>
 </template>
 
@@ -52,8 +53,9 @@ export default {
         width: calc((100% / 3) - 30px);
         text-align: center;
         margin: 15px;
-        background-color: #d48f38;
-        .card-name {
+        background-color: #000;
+        border: 3px solid lightgray;
+        div {
             color: #fff;
             margin: 12px 0;
         }

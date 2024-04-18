@@ -40,7 +40,7 @@ export default {
 .container {
     width: 85%;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: gray;
     .cards {
         display: flex;
         flex-wrap: wrap;
