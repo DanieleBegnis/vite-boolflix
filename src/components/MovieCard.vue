@@ -72,7 +72,14 @@ export default {
                 <div class="language" v-else>{{ cardInfo.original_language }}</div>
             </div>
             <div class="card-review">
-                <div class="review" v-if="roundVote(star) === 1">
+                <div class="review" v-if="roundVote(star) === 0">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="review" v-else-if="roundVote(star) === 1">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
                     <i class="fa-regular fa-star"></i>
