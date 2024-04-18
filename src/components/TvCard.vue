@@ -15,31 +15,33 @@ export default {
         <div class="card-image">
             <img :src="`https://image.tmdb.org/t/p/w342${cardInfo.backdrop_path}`" alt="">
         </div>
-        <div class="name">{{ cardInfo.name }}</div>
-        <div class="original-name">{{ cardInfo.original_name }}</div>
-        <div class="card-flag">
-            <div class="language" v-if="cardInfo.original_language === 'en'">
-                <img class="language-img" src="../assets/img/en.png">
+        <div class="card-informations">
+            <div class="name">{{ cardInfo.name }}</div>
+            <div class="original-name">{{ cardInfo.original_name }}</div>
+            <div class="card-flag">
+                <div class="language" v-if="cardInfo.original_language === 'en'">
+                    <img class="language-img" src="../assets/img/en.png">
+                </div>
+                <div class="language" v-else-if="cardInfo.original_language === 'de'">
+                    <img class="language-img" src="../assets/img/de.png">
+                </div>
+                <div class="language" v-else-if="cardInfo.original_language === 'it'">
+                    <img class="language-img" src="../assets/img/it.png">
+                </div>
+                <div class="language" v-else-if="cardInfo.original_language === 'fr'">
+                    <img class="language-img" src="../assets/img/fr.png">
+                </div>
+                <div class="language" v-else-if="cardInfo.original_language === 'es'">
+                    <img class="language-img" src="../assets/img/es.png">
+                </div>
+                <div class="language" v-else-if="cardInfo.original_language === 'ja'">
+                    <img class="language-img" src="../assets/img/ja.png">
+                </div>
+                <div class="language" v-else>{{ cardInfo.original_language }}</div>
             </div>
-            <div class="language" v-else-if="cardInfo.original_language === 'de'">
-                <img class="language-img" src="../assets/img/de.png">
-            </div>
-            <div class="language" v-else-if="cardInfo.original_language === 'it'">
-                <img class="language-img" src="../assets/img/it.png">
-            </div>
-            <div class="language" v-else-if="cardInfo.original_language === 'fr'">
-                <img class="language-img" src="../assets/img/fr.png">
-            </div>
-            <div class="language" v-else-if="cardInfo.original_language === 'es'">
-                <img class="language-img" src="../assets/img/es.png">
-            </div>
-            <div class="language" v-else-if="cardInfo.original_language === 'ja'">
-                <img class="language-img" src="../assets/img/ja.png">
-            </div>
-            <div class="language" v-else>{{ cardInfo.original_language }}</div>
+            <div class="review">{{ cardInfo.vote_average }}</div>
+            <div class="overwiew">{{ cardInfo.overview }}</div>
         </div>
-        <div class="review">{{ cardInfo.vote_average }}</div>
-        <div class="overwiew">{{ cardInfo.overview }}</div>
     </div>
 </template>
 
