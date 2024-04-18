@@ -1,17 +1,20 @@
 <script>
+
 export default {
     name: 'MovieCard',
     props: {
         cardInfo: Object
     },
     methods: {
-
     }
 }
 </script>
 
 <template>
     <div class="single-card">
+        <div class="card-image">
+            <img :src="`https://image.tmdb.org/t/p/w342${cardInfo.backdrop_path}`" alt="">
+        </div>
         <div class="name">{{ cardInfo.title }}</div>
         <div class="original-name">{{ cardInfo.original_title }}</div>
         <div class="card-flag">
