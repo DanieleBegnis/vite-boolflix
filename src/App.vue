@@ -31,7 +31,20 @@ export default {
       .then((response) => {
         store.movies = response.data.results;
       });
-    }
+      let apiUrlSeries = 'https://api.themoviedb.org/3/search/tv';
+      const queryParamsSeries = {
+        api_key: '479a9729247295c116f0ae2984f62d3b',
+      };
+      if(store.searchedMovie !== '') {
+        queryParamsSeries.query = store.searchedMovie;
+      }
+      axios.get(apiUrlSeries, {
+        params: queryParamsSeries
+      })
+      .then((response) => {
+        store.series = response.data.results;
+      });
+    },
 
   },
   mounted() {

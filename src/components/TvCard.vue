@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'MovieCard',
+    name: 'TvCard',
     props: {
         cardInfo: Object
     },
@@ -12,8 +12,8 @@ export default {
 
 <template>
     <div class="single-card">
-        <div class="name">{{ cardInfo.title }}</div>
-        <div class="original-name">{{ cardInfo.original_title }}</div>
+        <div class="name">{{ cardInfo.name }}</div>
+        <div class="original-name">{{ cardInfo.original_name }}</div>
         <div class="card-flag">
             <div class="language" v-if="cardInfo.original_language === 'en'">
                 <img src="../assets/img/en.png">
