@@ -13,6 +13,7 @@ export default {
     methods: {
     },
     computed: {
+        //funzione che fa vedere numero di stelle
         fullStars() {
             return Math.ceil(this.vote / 2);
         },
@@ -73,12 +74,17 @@ export default {
     -moz-box-shadow: 0px 0px 27px 1px #E50914;
     -o-box-shadow: 0px 0px 27px 1px #E50914;
     box-shadow: 0px 0px 27px 1px #E50914;
+    
 
     div {
         color: #fff;
-        margin: 12px 0;
     }
-
+    .card-review {
+        color: yellow;
+    }
+    .name, .original-name, .card-flag, .card-review, .overwiew {
+        padding-top: 6px;
+    }
     p {
         margin-bottom: 6px;
     }
@@ -92,6 +98,7 @@ export default {
 }
 .overwiew {
     overflow-y: auto;
+    max-height: 100px;
 }
 .language-img {
     width: 16px;
